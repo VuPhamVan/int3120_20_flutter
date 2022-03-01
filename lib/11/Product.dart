@@ -22,29 +22,16 @@ class Product extends Model {
   static List<Product> getProducts() {
     List<Product> items = <Product>[];
 
-    items.add(Product("Pixel", "Pixel is the most feature-full phone ever", 800,
-        "pixel.jpg", 0));
-    items.add(Product("Laptop", "Laptop is most productive development tool",
-        2000, "laptop.jpg", 0));
-    items.add(Product(
-        "Tablet",
-        "Tablet is the most useful device ever for meeting",
-        1500,
-        "tablet.jpg",
-        0));
-    items.add(Product("Pendrive", "Pendrive is useful storage medium", 100,
-        "pendrive.jpg", 0));
-    items.add(Product(
-        "Floppy Drive",
-        "Floppy drive is useful rescue storage medium",
-        20,
-        "floppydisk.jpg",
-        0));
+    items.add(Product('4 GB', 'DDR4-2400 10-12-10-27 1.65V', 24, '4.png', 0));
+    items.add(Product('8 GB', 'DDR4-2400 10-12-10-27 1.65V', 45, '8.png', 0));
+    items.add(Product('16 GB', 'DDR4-2400 10-12-10-27 1.65V', 79, '16.png', 0));
+    items
+        .add(Product('32 GB', 'DDR4-2400 10-12-10-27 1.65V', 149, '32.png', 0));
     return items;
   }
 
-  void updateRating(int myRating) {
-    rating = myRating;
+  void updateRating(int rating) {
+    this.rating = rating;
     notifyListeners();
   }
 }
