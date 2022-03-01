@@ -29,8 +29,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite: ^2.0.2
+  path_provider: ^2.0.9
   scoped_model: ^2.0.0-nullsafety.0
-
+  intl: any
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -69,6 +71,10 @@ flutter:
     - assets/appimages/pendrive.jpg
     - assets/appimages/pixel.jpg
     - assets/appimages/tablet.jpg
+    - assets/ram/4.png
+    - assets/ram/8.png
+    - assets/ram/16.png
+    - assets/ram/32.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
