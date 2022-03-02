@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyHomePage extends StatelessWidget {
   final String title;
-
+  static const String _url = 'https://github.com/VuPhamVan/int3120_20_flutter.git';
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  static const platform = const MethodChannel('int3120_20_flutter.14/browser');
 
-  Future<void> _openBrowser() async {
-    try {
-      final int result = await platform.invokeMethod(
-          'openBrowser', <String, String>{'url': "https://flutter.dev"});
-    } on PlatformException catch (e) {
-      print(e);
-    }
+  void _launchURL() async {
+    if (!await launch(_url)) throw 'Could not launch $_url';
   }
 
   @override
@@ -27,7 +21,7 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           child: Text('Open Browser'),
-          onPressed: _openBrowser,
+          onPressed: _launchURL,
         ),
       ),
     );
