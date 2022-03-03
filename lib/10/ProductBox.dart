@@ -20,7 +20,7 @@ class ProductBox extends StatelessWidget {
     // TODO: implement build
     return Container(
       padding: EdgeInsets.all(2),
-      height: 120,
+      height: 140,
       child: Card(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
