@@ -5,7 +5,7 @@
 - Bài 1: Giới thiệu Flutter
 - Bài 2: Cài đặt Flutter
 - Bài 3: Tạo ứng dụng Flutter đầu tiên
-  ![img.png](demo/3.png=108x240)
+  ![img.png](demo/3.png =108x240)
 - Bài 4: Kiến trúc ứng dụng Flutter
 - Bài 5: Giới thiệu ngôn ngữ Dart
 - Bài 6: Widget trong Flutter
