@@ -18,7 +18,8 @@
 - Bài 8: Gesture trong Flutter<br/>
   <img src="demo/8_1.jpg" width="108" height="240">
   <img src="demo/8_2.jpg" width="108" height="240"><br/>
-- Bài 10: Quản lý trạng thái Sate trong Flutter<br/>
+- Bài 9: Quản lý trạng thái trong Flutter  
+- Bài 10: Statefulwidget trong Flutter<br/>
   <img src="demo/10.jpg" width="108" height="240"><br/>
 - Bài 11: ScopedModel trong Flutter<br/>
   <img src="demo/11.jpg" width="108" height="240"><br/>
@@ -27,3 +28,6 @@
   <img src="demo/12_2.jpg" width="108" height="240"><br/>
 - Bài 13: Animation<br/>
   <img src="demo/13.jpg" width="108" height="240"><br/>
+- Bài 16: Giới thiệu về package<br/>
+  <img src="demo/16_1.jpg" width="108" height="240">
+  <img src="demo/16_2.jpg" width="108" height="240"><br/>
