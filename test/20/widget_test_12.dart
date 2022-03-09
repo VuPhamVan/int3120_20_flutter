@@ -7,24 +7,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:int3120_20_flutter/10/statefulwidget.dart';
+import 'package:int3120_20_flutter/12/MyApp.dart';
+import 'package:int3120_20_flutter/12/Product.dart';
+import 'package:int3120_20_flutter/12/ProductPage.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(const MyApp());
 
     // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Product Navigation'), findsOneWidget);
+    expect(find.text('4 GB'), findsOneWidget);
+    expect(find.text('DDR4-2400 10-12-10-27 1.65V'), findsNWidgets(4));
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
   });
 }
