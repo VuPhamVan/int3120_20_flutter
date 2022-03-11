@@ -32,7 +32,7 @@
   <img src="demo/16_1.jpg" width="108" height="240">
   <img src="demo/16_2.jpg" width="108" height="240"><br/>
 - Bài 17: REST API<br/>
-  <img src="demo/17_1.png" width="108" height="240">
+  <img src="demo/17_1.png" width="341" height="192">
   <img src="demo/17_2.jpg" width="108" height="240"><br/>
 
 - Bài 18: Khái niệm về Database<br/>
