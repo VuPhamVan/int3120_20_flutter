@@ -31,8 +31,8 @@ class SQLiteDbProvider {
           ")");
       await db
           .execute("INSERT INTO Expense ('id', 'amount', 'date', 'category')"
-              "values (?, ?, ?, ?)"
-              ",[1, 1000, '2019-04-01 10:00:00', Food]");
+              "values (?, ?, ?, ?)",
+          [1, 1000, '2019-04-01 10:00:00', 'Food']);
       /*await db.execute(
                "INSERT INTO Product ('id', 'name', 'description', 'price', 'image')
                values (?, ?, ?, ?, ?)", [
@@ -68,8 +68,8 @@ class SQLiteDbProvider {
 
   Future<List<Expense>> getAllExpenses() async {
     final db = await database;
-    List<Map> results = await db!.query("Expense",
-        columns: Expense.columns, orderBy: "date DESC");
+    List<Map> results = await db!
+        .query("Expense", columns: Expense.columns, orderBy: "date DESC");
     List<Expense> expenses = [];
     results.forEach((result) {
       Expense expense = Expense.fromMap(result);
@@ -95,12 +95,12 @@ class SQLiteDbProvider {
     final db = await database;
     var maxIdResult =
         await db!.rawQuery("SELECT MAX(id)+1 as last_inserted_id FROM Expense");
-    var id = maxIdResult.first["last_inserted_id"] as int;
+    var id = maxIdResult.first["last_inserted_id"];
     var result = await db.rawInsert(
         "INSERT Into Expense (id, amount, date, category)"
         " VALUES (?, ?, ?, ?)",
         [id, expense.amount, expense.date.toString(), expense.category]);
-    return Expense(id, expense.amount, expense.date, expense.category);
+    return Expense(int.parse(id.toString()), expense.amount, expense.date, expense.category);
   }
 
   update(Expense product) async {

@@ -1,6 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:int3120_20_flutter/23/ExpenseListModel.dart';
+import '23/ExpenseListModel.dart';
 import '23/Expense.dart';
 
 void main() {
@@ -148,6 +153,8 @@ class _FormPageState extends State<FormPage> {
     }
   }
 
+
+
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picker = await showDatePicker(
         context: context,
@@ -188,12 +195,10 @@ class _FormPageState extends State<FormPage> {
                   else
                     return null;
                 },
-                initialValue:
-                    id == 0 ? '' : expenses.byId(id)!.amount.toString(),
+                initialValue: id == 0 ? '' : expenses.byId(id)!.amount.toString(),
                 onSaved: (val) => _amount = double.parse(val!),
               ),
               TextFormField(
-                controller: TextEditingController(),
                 style: TextStyle(fontSize: 22),
                 decoration: const InputDecoration(
                   icon: const Icon(Icons.calendar_today),
@@ -210,7 +215,7 @@ class _FormPageState extends State<FormPage> {
                 //   else
                 //     return null;
                 // },
-                onSaved: (val) => _date = DateTime.parse(val!),
+                onSaved: (val) => _date,
                 initialValue: id == 0 ? '' : expenses.byId(id)!.formattedDate,
                 keyboardType: TextInputType.datetime,
                 onTap: () {
